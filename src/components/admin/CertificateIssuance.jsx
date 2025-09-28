@@ -7,7 +7,7 @@ const CertificateIssuance = () => {
     skill: '',
     level: 'Beginner',
     issueDate: new Date().toISOString().split('T')[0],
-    organization: 'BlockCred Academy'
+    organization: 'Digital India Academy'
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [issuedCertificates, setIssuedCertificates] = useState([]);

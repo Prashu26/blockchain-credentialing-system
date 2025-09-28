@@ -13,7 +13,7 @@ import {
   ArrowLeft
 } from 'lucide-react';
 
-const Sidebar = ({ activeTab, setActiveTab, userType, onBackToLanding }) => {
+const Sidebar = ({ activeTab, setActiveTab, userType, onBackToLanding, isMobile, sidebarOpen, setSidebarOpen }) => {
   const getMenuItems = () => {
     switch (userType) {
       case 'admin':
@@ -56,24 +56,42 @@ const Sidebar = ({ activeTab, setActiveTab, userType, onBackToLanding }) => {
   const menuItems = getMenuItems();
 
   return (
-    <div className="shadow-2xl h-screen w-64 fixed left-0 top-0 z-10 border-r" 
-         style={{
-           background: 'linear-gradient(180deg, #001629 0%, #003459 50%, #012A4A 100%)',
-           borderColor: 'rgba(0, 150, 199, 0.3)'
-         }}>
+    <div 
+      className={`shadow-2xl h-screen w-64 fixed left-0 top-0 border-r transition-transform duration-300 z-40 ${
+        isMobile ? (sidebarOpen ? 'translate-x-0' : '-translate-x-full') : 'translate-x-0'
+      }`}
+      style={{
+        background: 'linear-gradient(180deg, #001629 0%, #003459 50%, #012A4A 100%)',
+        borderColor: 'rgba(0, 150, 199, 0.3)'
+      }}
+    >
       <div className="p-6 border-b" style={{borderColor: 'rgba(0, 150, 199, 0.3)'}}>
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg" 
-               style={{
-                 background: 'linear-gradient(135deg, #0096C7, #0077B6)',
-                 boxShadow: '0 4px 15px rgba(0, 150, 199, 0.4)'
-               }}>
-            <Building2 className="w-6 h-6 text-white" />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center shadow-lg" 
+                 style={{
+                   background: 'linear-gradient(135deg, #0096C7, #0077B6)',
+                   boxShadow: '0 4px 15px rgba(0, 150, 199, 0.4)'
+                 }}>
+              <Building2 className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-white">BlockCred</h1>
+              <p className="text-sm text-gray-300 capitalize">{userType} Portal</p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-lg font-bold text-white">BlockCred</h1>
-            <p className="text-sm text-gray-300 capitalize">{userType} Portal</p>
-          </div>
+          
+          {/* Mobile Close Button */}
+          {isMobile && (
+            <button
+              onClick={() => setSidebarOpen(false)}
+              className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
       
@@ -81,7 +99,10 @@ const Sidebar = ({ activeTab, setActiveTab, userType, onBackToLanding }) => {
         {/* Back to Landing Option */}
         {onBackToLanding && (
           <button
-            onClick={onBackToLanding}
+            onClick={() => {
+              onBackToLanding();
+              if (isMobile) setSidebarOpen(false);
+            }}
             className="w-full flex items-center px-6 py-3 text-left transition-all duration-300 text-gray-300 hover:text-white border-b mb-2 rounded-lg mx-2"
             style={{
               borderColor: 'rgba(0, 150, 199, 0.3)',
@@ -101,7 +122,10 @@ const Sidebar = ({ activeTab, setActiveTab, userType, onBackToLanding }) => {
           return (
             <button
               key={item.id}
-              onClick={() => setActiveTab(item.id)}
+              onClick={() => {
+                setActiveTab(item.id);
+                if (isMobile) setSidebarOpen(false);
+              }}
               className={`w-full flex items-center px-6 py-3 mx-2 my-1 text-left transition-all duration-300 rounded-xl ${
                 isActive ? 'text-white shadow-lg' : 'text-gray-300 hover:text-white'
               }`}

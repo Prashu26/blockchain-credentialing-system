@@ -3,33 +3,33 @@
 export const mockCertificates = [
   {
     id: 'CERT-001',
-    learnerName: 'John Doe',
+    learnerName: 'Arjun Sharma',
     skill: 'React Development',
     level: 'Advanced',
     issueDate: '2024-01-15',
-    organization: 'Tech Academy',
+    organization: 'IIT Delhi Tech Academy',
     blockchainHash: '0x1a2b3c4d5e6f7890abcdef1234567890abcdef12',
     status: 'Verified',
     qrCode: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
   },
   {
     id: 'CERT-002',
-    learnerName: 'Jane Smith',
+    learnerName: 'Priya Patel',
     skill: 'Blockchain Development',
     level: 'Expert',
     issueDate: '2024-02-20',
-    organization: 'Crypto Institute',
+    organization: 'IIIT Hyderabad Blockchain Institute',
     blockchainHash: '0x2b3c4d5e6f7890abcdef1234567890abcdef1234',
     status: 'Verified',
     qrCode: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
   },
   {
     id: 'CERT-003',
-    learnerName: 'Mike Johnson',
+    learnerName: 'Rahul Kumar',
     skill: 'Data Science',
     level: 'Intermediate',
     issueDate: '2024-03-10',
-    organization: 'Data University',
+    organization: 'IISc Bangalore Data Center',
     blockchainHash: '0x3c4d5e6f7890abcdef1234567890abcdef123456',
     status: 'Pending',
     qrCode: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
@@ -39,8 +39,8 @@ export const mockCertificates = [
 export const mockLearners = [
   {
     id: 'LEARNER-001',
-    name: 'John Doe',
-    email: 'john.doe@email.com',
+    name: 'Arjun Sharma',
+    email: 'arjun.sharma@gmail.com',
     course: 'Full Stack Development',
     completionStatus: 'Completed',
     skillLevel: 'Advanced',
@@ -50,8 +50,8 @@ export const mockLearners = [
   },
   {
     id: 'LEARNER-002',
-    name: 'Jane Smith',
-    email: 'jane.smith@email.com',
+    name: 'Priya Patel',
+    email: 'priya.patel@gmail.com',
     course: 'Blockchain Fundamentals',
     completionStatus: 'Completed',
     skillLevel: 'Expert',
@@ -61,8 +61,8 @@ export const mockLearners = [
   },
   {
     id: 'LEARNER-003',
-    name: 'Mike Johnson',
-    email: 'mike.johnson@email.com',
+    name: 'Rahul Kumar',
+    email: 'rahul.kumar@gmail.com',
     course: 'Data Analytics',
     completionStatus: 'In Progress',
     skillLevel: 'Intermediate',
@@ -76,44 +76,44 @@ export const mockVerificationLogs = [
   {
     id: 'VER-001',
     certificateId: 'CERT-001',
-    learnerName: 'John Doe',
-    organization: 'Tech Company A',
+    learnerName: 'Arjun Sharma',
+    organization: 'Wipro Technologies',
     verificationStatus: 'Verified',
     timestamp: '2024-03-15 10:30:00',
-    verifier: 'HR Manager'
+    verifier: 'Rekha Menon, HR Manager'
   },
   {
     id: 'VER-002',
     certificateId: 'CERT-002',
-    learnerName: 'Jane Smith',
-    organization: 'Blockchain Startup',
+    learnerName: 'Priya Patel',
+    organization: 'Infosys Blockchain Labs',
     verificationStatus: 'Verified',
     timestamp: '2024-03-14 14:20:00',
-    verifier: 'CTO'
+    verifier: 'Kiran Reddy, CTO'
   },
   {
     id: 'VER-003',
     certificateId: 'CERT-003',
-    learnerName: 'Mike Johnson',
-    organization: 'Data Corp',
+    learnerName: 'Rahul Kumar',
+    organization: 'Tata Consultancy Services',
     verificationStatus: 'Pending',
     timestamp: '2024-03-16 09:15:00',
-    verifier: 'Team Lead'
+    verifier: 'Anita Singh, Team Lead'
   }
 ];
 
 export const mockAnalytics = {
   certificatesIssued: {
-    'React Development': 45,
-    'Blockchain Development': 32,
-    'Data Science': 28,
-    'Machine Learning': 22,
-    'Cybersecurity': 18
+    'React Development': 1250,
+    'Blockchain Development': 892,
+    'Data Science': 1430,
+    'Machine Learning': 967,
+    'Cybersecurity': 743
   },
   verificationStats: {
-    verified: 85,
-    pending: 12,
-    expired: 3
+    verified: 4285,
+    pending: 367,
+    expired: 48
   },
   skillDemand: {
     'React': 92,
@@ -159,7 +159,7 @@ export const mockBlockchainStatus = {
   network: 'Hyperledger Fabric',
   status: 'Active',
   lastBlock: '0x7f8e9d0c1b2a3456789abcdef1234567890abcdef',
-  transactionCount: 1247,
-  gasUsed: '0.00234 ETH',
-  carbonFootprint: '2.1 kg CO₂ saved'
+  transactionCount: 52847,
+  gasUsed: '₹2.34 INR equivalent',
+  carbonFootprint: '847.3 kg CO₂ saved'
 };

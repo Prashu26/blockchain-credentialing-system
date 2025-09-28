@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/shared/Sidebar';
 import Landing from './components/Landing';
@@ -35,6 +35,20 @@ function App() {
   const [showLanding, setShowLanding] = useState(true);
   const [userType, setUserType] = useState('admin');
   const [activeTab, setActiveTab] = useState('dashboard');
+  const [isMobile, setIsMobile] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Check for mobile screen size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const handleUserTypeSelect = (type) => {
     setUserType(type);
@@ -53,6 +67,10 @@ function App() {
 
   const handleBackToLanding = () => {
     setShowLanding(true);
+  };
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
   };
 
   // Show landing page if showLanding is true
@@ -128,15 +146,47 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex" style={{backgroundColor: '#001629'}}>
+    <div className="min-h-screen flex relative" style={{backgroundColor: '#001629'}}>
+      {/* Mobile Menu Button */}
+      {isMobile && (
+        <button
+          onClick={toggleSidebar}
+          className="fixed top-4 left-4 z-50 p-3 rounded-lg shadow-lg md:hidden"
+          style={{
+            background: 'linear-gradient(135deg, #0096C7, #0077B6)',
+            boxShadow: '0 4px 15px rgba(0, 150, 199, 0.4)'
+          }}
+        >
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      )}
+
+      {/* Mobile Overlay */}
+      {isMobile && sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
+          onClick={() => setSidebarOpen(false)}
+        ></div>
+      )}
+
       <Sidebar 
         activeTab={activeTab} 
         setActiveTab={setActiveTab} 
         userType={userType}
         onBackToLanding={handleBackToLanding}
+        isMobile={isMobile}
+        sidebarOpen={sidebarOpen}
+        setSidebarOpen={setSidebarOpen}
       />
       
-      <main className="flex-1 ml-64 min-h-screen" style={{backgroundColor: '#001629'}}>
+      <main 
+        className={`flex-1 min-h-screen transition-all duration-300 ${
+          isMobile ? 'ml-0' : 'ml-64'
+        }`} 
+        style={{backgroundColor: '#001629'}}
+      >
         {renderDashboard()}
       </main>
     </div>

@@ -240,9 +240,9 @@ const Analytics = () => {
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Regional Performance</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="text-center p-4 border border-gray-200 rounded-lg">
-            <div className="text-2xl font-bold text-gray-900 mb-2">45</div>
-            <div className="text-sm text-gray-600 mb-1">North America</div>
-            <div className="text-xs text-green-600">+12% growth</div>
+            <div className="text-2xl font-bold text-gray-900 mb-2">2847</div>
+            <div className="text-sm text-gray-600 mb-1">Maharashtra</div>
+            <div className="text-xs text-green-600">+24% growth</div>
           </div>
           <div className="text-center p-4 border border-gray-200 rounded-lg">
             <div className="text-2xl font-bold text-gray-900 mb-2">38</div>

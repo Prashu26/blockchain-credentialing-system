@@ -199,7 +199,7 @@ const DashboardOverview = () => {
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <p className="font-bold text-white">Certificate issued to John Doe</p>
+                  <p className="font-bold text-white">Certificate issued to Arjun Sharma</p>
                   <p className="text-gray-300 text-sm">React Development - Advanced Level</p>
                 </div>
                 <span className="text-gray-400 text-sm font-medium">2 hours ago</span>
@@ -244,7 +244,7 @@ const DashboardOverview = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-bold text-white">New user registered</p>
-                  <p className="text-gray-300 text-sm">Jane Smith joined as learner 🌊</p>
+                  <p className="text-gray-300 text-sm">Priya Patel joined as learner 🌊</p>
                 </div>
                 <span className="text-gray-400 text-sm font-medium">6 hours ago</span>
               </div>

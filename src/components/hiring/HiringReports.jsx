@@ -148,11 +148,11 @@ const HiringReports = () => {
             <div className="text-sm text-gray-600">Total Candidates</div>
           </div>
           <div className="text-center p-4 bg-green-50 rounded-lg">
-            <div className="text-2xl font-bold text-green-600">156</div>
+            <div className="text-2xl font-bold text-green-600">2,847</div>
             <div className="text-sm text-gray-600">Successful Hires</div>
           </div>
           <div className="text-center p-4 bg-purple-50 rounded-lg">
-            <div className="text-2xl font-bold text-purple-600">18 days</div>
+            <div className="text-2xl font-bold text-purple-600">12 days</div>
             <div className="text-sm text-gray-600">Avg Time to Hire</div>
           </div>
           <div className="text-center p-4 bg-yellow-50 rounded-lg">

@@ -13,7 +13,7 @@ const CareerPathways = () => {
   const recommendedCourses = [
     { 
       title: 'Advanced Node.js Development', 
-      provider: 'Tech Academy', 
+      provider: 'IIT Bombay Tech Academy', 
       duration: '8 weeks', 
       rating: 4.8,
       price: 'Free',
@@ -21,18 +21,18 @@ const CareerPathways = () => {
     },
     { 
       title: 'Full Stack JavaScript', 
-      provider: 'Code Institute', 
+      provider: 'NIELIT Skill Development', 
       duration: '12 weeks', 
       rating: 4.9,
-      price: '$299',
+      price: '₹12,999',
       skills: ['React', 'Node.js', 'Database']
     },
     { 
       title: 'API Design & Development', 
-      provider: 'Dev University', 
+      provider: 'IIIT Bangalore', 
       duration: '6 weeks', 
       rating: 4.7,
-      price: '$199',
+      price: '₹8,999',
       skills: ['REST API', 'GraphQL', 'Authentication']
     }
   ];
@@ -55,15 +55,15 @@ const CareerPathways = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.3)', animationDelay: '1s'}}></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.2)', animationDelay: '2s'}}></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto p-8 space-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto p-4 md:p-8 space-y-6 md:space-y-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight" style={{textShadow: '0 0 30px rgba(0, 150, 199, 0.7)'}}>
+        <div className="text-center mb-8 md:mb-16 pt-16 md:pt-0">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 tracking-tight" style={{textShadow: '0 0 30px rgba(0, 150, 199, 0.7)'}}>
             <span style={{color: '#0096C7', textShadow: '0 0 20px rgba(0, 150, 199, 0.8)'}}>
               Career Pathways
             </span>
           </h1>
-          <p className="text-2xl text-gray-200 max-w-3xl mx-auto mb-4 font-medium">
+          <p className="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-4 font-medium px-4">
             Discover your <span style={{color: '#0096C7'}}>next career steps</span> and <span style={{color: '#0096C7'}}>skill development opportunities</span>
           </p>
           <div className="flex justify-center">
@@ -78,30 +78,30 @@ const CareerPathways = () => {
         </div>
 
         {/* Current Status */}
-        <div className="backdrop-blur-sm rounded-2xl p-8 shadow-lg border" 
+        <div className="backdrop-blur-sm rounded-2xl p-4 md:p-8 shadow-lg border" 
              style={{
                background: 'rgba(255, 255, 255, 0.1)',
                borderColor: 'rgba(0, 150, 199, 0.3)',
                boxShadow: '0 8px 32px rgba(0, 150, 199, 0.2)'
              }}>
           <div className="flex items-center mb-4">
-            <Target className="w-6 h-6 mr-3" style={{color: '#0096C7'}} />
-            <h2 className="text-xl font-semibold text-white">Your Career Journey</h2>
+            <Target className="w-5 h-5 md:w-6 md:h-6 mr-3" style={{color: '#0096C7'}} />
+            <h2 className="text-lg md:text-xl font-semibold text-white">Your Career Journey</h2>
           </div>
           
-          <div className="backdrop-blur-sm rounded-xl p-6 border" 
+          <div className="backdrop-blur-sm rounded-xl p-4 md:p-6 border" 
                style={{
                  background: 'rgba(255, 255, 255, 0.05)',
                  borderColor: 'rgba(0, 150, 199, 0.3)'
                }}>
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 space-y-4 md:space-y-0">
               <div>
-                <h3 className="text-lg font-semibold text-white">Current Position</h3>
-                <p className="text-gray-300">Frontend Developer</p>
+                <h3 className="text-base md:text-lg font-semibold text-white">Current Position</h3>
+                <p className="text-sm md:text-base text-gray-300">Software Developer</p>
               </div>
-              <div className="text-right">
-                <div className="text-2xl font-bold" style={{color: '#0096C7'}}>85%</div>
-                <div className="text-sm text-gray-300">Career Score</div>
+              <div className="text-left md:text-right">
+                <div className="text-xl md:text-2xl font-bold" style={{color: '#0096C7'}}>85%</div>
+                <div className="text-xs md:text-sm text-gray-300">Career Score</div>
               </div>
             </div>
             
@@ -113,30 +113,30 @@ const CareerPathways = () => {
             </div>
             
             <p className="text-sm text-gray-300">
-              You're on track to become a Full Stack Developer. Complete the recommended skills to reach your goal.
+              You're on track to become a Senior Software Engineer. Complete the recommended skills to reach your goal.
             </p>
           </div>
         </div>
 
         {/* Career Pathways */}
-        <div className="backdrop-blur-sm rounded-2xl p-8 shadow-lg border" 
+        <div className="backdrop-blur-sm rounded-2xl p-4 md:p-8 shadow-lg border" 
              style={{
                background: 'rgba(255, 255, 255, 0.1)',
                borderColor: 'rgba(0, 150, 199, 0.3)',
                boxShadow: '0 8px 32px rgba(0, 150, 199, 0.2)'
              }}>
-          <h2 className="text-xl font-semibold text-white mb-6">Recommended Career Paths</h2>
-          <div className="space-y-6">
+          <h2 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6">Recommended Career Paths</h2>
+          <div className="space-y-4 md:space-y-6">
             {mockCareerPathways.map((pathway, index) => (
-              <div key={index} className="backdrop-blur-sm rounded-xl p-6 border transition-shadow hover:shadow-lg" 
+              <div key={index} className="backdrop-blur-sm rounded-xl p-4 md:p-6 border transition-shadow hover:shadow-lg" 
                    style={{
                      background: 'rgba(255, 255, 255, 0.05)',
                      borderColor: 'rgba(0, 150, 199, 0.3)',
                      boxShadow: '0 4px 15px rgba(0, 150, 199, 0.1)'
                    }}>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white">From {pathway.current}</h3>
-                  <span className="px-3 py-1 rounded-full text-sm font-medium" 
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 space-y-2 md:space-y-0">
+                  <h3 className="text-base md:text-lg font-semibold text-white">From {pathway.current}</h3>
+                  <span className="px-3 py-1 rounded-full text-xs md:text-sm font-medium w-fit" 
                         style={{
                           background: 'rgba(0, 255, 150, 0.2)',
                           color: '#00ff96'
@@ -145,13 +145,13 @@ const CareerPathways = () => {
                   </span>
                 </div>
                 
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="text-white px-4 py-2 rounded-lg font-medium" 
+                <div className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4 mb-6">
+                  <div className="text-white px-3 md:px-4 py-2 rounded-lg font-medium text-sm md:text-base text-center" 
                        style={{background: 'linear-gradient(135deg, #0096C7, #0077B6)'}}>
                     {pathway.current}
                   </div>
-                  <ArrowRight className="w-6 h-6 text-gray-300" />
-                  <div className="text-white px-4 py-2 rounded-lg font-medium" 
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-gray-300 mx-auto md:mx-0" />
+                  <div className="text-white px-3 md:px-4 py-2 rounded-lg font-medium text-sm md:text-base text-center" 
                        style={{background: 'rgba(0, 255, 150, 0.3)', color: '#00ff96'}}>
                     {pathway.recommended}
                   </div>
@@ -187,9 +187,9 @@ const CareerPathways = () => {
                 </div>
                 
                 <div className="mt-4 pt-4 border-t" style={{borderColor: 'rgba(0, 150, 199, 0.3)'}}>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-300">Estimated Timeline: 3-6 months</span>
-                    <button className="ocean-button">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between space-y-3 md:space-y-0">
+                    <span className="text-xs md:text-sm text-gray-300">Estimated Timeline: 3-6 months</span>
+                    <button className="ocean-button text-sm px-4 py-2">
                       Start Learning Path
                     </button>
                   </div>
@@ -200,18 +200,77 @@ const CareerPathways = () => {
         </div>
 
         {/* Skill Gap Analysis */}
-        <div className="backdrop-blur-sm rounded-2xl p-8 shadow-lg border" 
+        <div className="backdrop-blur-sm rounded-2xl p-4 md:p-8 shadow-lg border" 
              style={{
                background: 'rgba(255, 255, 255, 0.1)',
                borderColor: 'rgba(0, 150, 199, 0.3)',
                boxShadow: '0 8px 32px rgba(0, 150, 199, 0.2)'
              }}>
-          <div className="flex items-center mb-6">
-            <TrendingUp className="w-6 h-6 mr-3" style={{color: '#ff6b6b'}} />
-            <h2 className="text-xl font-semibold text-white">Skill Gap Analysis</h2>
+          <div className="flex items-center mb-4 md:mb-6">
+            <TrendingUp className="w-5 h-5 md:w-6 md:h-6 mr-3" style={{color: '#ff6b6b'}} />
+            <h2 className="text-lg md:text-xl font-semibold text-white">Skill Gap Analysis</h2>
           </div>
           
-          <div className="overflow-x-auto">
+          {/* Mobile Card View */}
+          <div className="md:hidden space-y-4">
+            {skillGaps.map((gap, index) => (
+              <div key={index} className="backdrop-blur-sm rounded-xl p-4 border" 
+                   style={{
+                     background: 'rgba(255, 255, 255, 0.05)',
+                     borderColor: 'rgba(0, 150, 199, 0.3)'
+                   }}>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center">
+                    <BookOpen className="w-4 h-4 mr-2" style={{color: '#0096C7'}} />
+                    <span className="font-medium text-white text-sm">{gap.skill}</span>
+                  </div>
+                  <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
+                    gap.priority === 'High' 
+                      ? 'text-red-300' 
+                      : 'text-yellow-300'
+                  }`} style={{
+                    background: gap.priority === 'High' 
+                      ? 'rgba(255, 99, 99, 0.2)' 
+                      : 'rgba(255, 193, 7, 0.2)'
+                  }}>
+                    {gap.priority}
+                  </span>
+                </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Time to Learn:</span>
+                    <span className="text-white">{gap.timeToLearn}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Market Demand:</span>
+                    <div className="flex items-center">
+                      <div className="w-12 rounded-full h-1.5 mr-2" style={{background: 'rgba(255, 255, 255, 0.2)'}}>
+                        <div 
+                          className="h-1.5 rounded-full" 
+                          style={{ 
+                            width: `${gap.demand}%`,
+                            background: 'linear-gradient(135deg, #00ff96, #00d484)'
+                          }}
+                        ></div>
+                      </div>
+                      <span className="text-xs text-gray-300">{gap.demand}%</span>
+                    </div>
+                  </div>
+                  <button className="w-full mt-2 text-xs font-medium py-2 rounded-lg transition-colors" 
+                          style={{
+                            color: '#0096C7',
+                            background: 'rgba(0, 150, 199, 0.1)',
+                            border: '1px solid rgba(0, 150, 199, 0.3)'
+                          }}>
+                    Find Courses
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Table View */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="min-w-full">
               <thead>
                 <tr className="border-b" style={{borderColor: 'rgba(0, 150, 199, 0.3)'}}>
@@ -277,20 +336,20 @@ const CareerPathways = () => {
         </div>
 
         {/* Recommended Courses */}
-        <div className="backdrop-blur-sm rounded-2xl p-8 shadow-lg border" 
+        <div className="backdrop-blur-sm rounded-2xl p-4 md:p-8 shadow-lg border" 
              style={{
                background: 'rgba(255, 255, 255, 0.1)',
                borderColor: 'rgba(0, 150, 199, 0.3)',
                boxShadow: '0 8px 32px rgba(0, 150, 199, 0.2)'
              }}>
-          <div className="flex items-center mb-6">
-            <BookOpen className="w-6 h-6 mr-3" style={{color: '#00ff96'}} />
-            <h2 className="text-xl font-semibold text-white">Recommended Courses</h2>
+          <div className="flex items-center mb-4 md:mb-6">
+            <BookOpen className="w-5 h-5 md:w-6 md:h-6 mr-3" style={{color: '#00ff96'}} />
+            <h2 className="text-lg md:text-xl font-semibold text-white">Recommended Courses</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {recommendedCourses.map((course, index) => (
-              <div key={index} className="backdrop-blur-sm rounded-xl p-6 border hover:shadow-lg transition-shadow" 
+              <div key={index} className="backdrop-blur-sm rounded-xl p-4 md:p-6 border hover:shadow-lg transition-shadow" 
                    style={{
                      background: 'rgba(255, 255, 255, 0.05)',
                      borderColor: 'rgba(0, 150, 199, 0.3)',
@@ -305,13 +364,13 @@ const CareerPathways = () => {
                     {course.duration}
                   </span>
                   <div className="flex items-center">
-                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                    <span className="text-sm text-gray-300">{course.rating}</span>
+                    <Star className="w-3 h-3 md:w-4 md:h-4 text-yellow-400 mr-1" />
+                    <span className="text-xs md:text-sm text-gray-300">{course.rating}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-white mb-2">{course.title}</h3>
-                <p className="text-gray-300 mb-3">{course.provider}</p>
+                <h3 className="text-base md:text-lg font-semibold text-white mb-2">{course.title}</h3>
+                <p className="text-sm md:text-base text-gray-300 mb-3">{course.provider}</p>
                 
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-1">
@@ -327,11 +386,11 @@ const CareerPathways = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between">
-                  <span className={`font-semibold ${course.price === 'Free' ? 'text-green-400' : 'text-white'}`}>
+                <div className="flex flex-col md:flex-row md:items-center justify-between space-y-3 md:space-y-0">
+                  <span className={`font-semibold text-sm md:text-base ${course.price === 'Free' ? 'text-green-400' : 'text-white'}`}>
                     {course.price}
                   </span>
-                  <button className="ocean-button">
+                  <button className="ocean-button text-sm px-4 py-2">
                     Enroll Now
                   </button>
                 </div>
@@ -341,27 +400,27 @@ const CareerPathways = () => {
         </div>
 
         {/* Progress Tracking */}
-        <div className="backdrop-blur-sm rounded-2xl p-8 shadow-lg border" 
+        <div className="backdrop-blur-sm rounded-2xl p-4 md:p-8 shadow-lg border" 
              style={{
                background: 'rgba(255, 255, 255, 0.1)',
                borderColor: 'rgba(0, 150, 199, 0.3)',
                boxShadow: '0 8px 32px rgba(0, 150, 199, 0.2)'
              }}>
-          <h2 className="text-xl font-semibold text-white mb-4">Learning Progress</h2>
+          <h2 className="text-lg md:text-xl font-semibold text-white mb-4">Learning Progress</h2>
           <div className="space-y-4">
-            <div className="flex items-center justify-between p-4 rounded-lg" 
+            <div className="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg space-y-3 md:space-y-0" 
                  style={{
                    background: 'rgba(0, 255, 150, 0.1)',
                    borderColor: 'rgba(0, 255, 150, 0.3)'
                  }}>
               <div className="flex items-center">
-                <CheckCircle className="w-6 h-6 mr-3" style={{color: '#00ff96'}} />
+                <CheckCircle className="w-5 h-5 md:w-6 md:h-6 mr-3" style={{color: '#00ff96'}} />
                 <div>
-                  <h3 className="font-medium text-white">React Advanced Concepts</h3>
-                  <p className="text-sm text-gray-300">Completed • 40 hours</p>
+                  <h3 className="font-medium text-white text-sm md:text-base">React Advanced Concepts</h3>
+                  <p className="text-xs md:text-sm text-gray-300">Completed • 40 hours</p>
                 </div>
               </div>
-              <span className="px-3 py-1 rounded-full text-sm font-medium" 
+              <span className="px-3 py-1 rounded-full text-xs md:text-sm font-medium w-fit" 
                     style={{
                       background: 'rgba(0, 255, 150, 0.2)',
                       color: '#00ff96'
@@ -370,27 +429,27 @@ const CareerPathways = () => {
               </span>
             </div>
             
-            <div className="flex items-center justify-between p-4 rounded-lg" 
+            <div className="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg space-y-3 md:space-y-0" 
                  style={{
                    background: 'rgba(0, 150, 199, 0.1)',
                    borderColor: 'rgba(0, 150, 199, 0.3)'
                  }}>
               <div className="flex items-center">
-                <BookOpen className="w-6 h-6 mr-3" style={{color: '#0096C7'}} />
+                <BookOpen className="w-5 h-5 md:w-6 md:h-6 mr-3" style={{color: '#0096C7'}} />
                 <div>
-                  <h3 className="font-medium text-white">Node.js Fundamentals</h3>
-                  <p className="text-sm text-gray-300">In Progress • 15/30 hours</p>
+                  <h3 className="font-medium text-white text-sm md:text-base">Node.js Fundamentals</h3>
+                  <p className="text-xs md:text-sm text-gray-300">In Progress • 15/30 hours</p>
                 </div>
               </div>
-              <div className="text-right">
-                <span className="px-3 py-1 rounded-full text-sm font-medium" 
+              <div className="text-left md:text-right">
+                <span className="px-3 py-1 rounded-full text-xs md:text-sm font-medium" 
                       style={{
                         background: 'rgba(0, 150, 199, 0.2)',
                         color: '#0096C7'
                       }}>
                   50%
                 </span>
-                <div className="w-24 rounded-full h-2 mt-2" style={{background: 'rgba(255, 255, 255, 0.2)'}}>
+                <div className="w-20 md:w-24 rounded-full h-2 mt-2" style={{background: 'rgba(255, 255, 255, 0.2)'}}>
                   <div className="h-2 rounded-full" 
                        style={{ 
                          width: '50%',

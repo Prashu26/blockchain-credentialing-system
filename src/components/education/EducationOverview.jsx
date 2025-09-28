@@ -131,7 +131,7 @@ const EducationOverview = () => {
               <CheckCircle className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-sm font-medium text-gray-900">John Doe completed React Development course</p>
+              <p className="text-sm font-medium text-gray-900">Arjun Sharma completed React Development course</p>
               <p className="text-xs text-gray-500">Certificate issued automatically</p>
             </div>
             <span className="text-xs text-gray-400">1 hour ago</span>
@@ -142,8 +142,8 @@ const EducationOverview = () => {
               <Users className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-sm font-medium text-gray-900">25 new learners enrolled in Data Science</p>
-              <p className="text-xs text-gray-500">Batch DS-2024-03 started</p>
+              <p className="text-sm font-medium text-gray-900">67 new learners enrolled in Data Science</p>
+              <p className="text-xs text-gray-500">Batch DS-2025-01 started</p>
             </div>
             <span className="text-xs text-gray-400">3 hours ago</span>
           </div>
@@ -154,7 +154,7 @@ const EducationOverview = () => {
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-gray-900">Certificate verification requested</p>
-              <p className="text-xs text-gray-500">CERT-002 verified by Tech Company B</p>
+              <p className="text-xs text-gray-500">CERT-002 verified by Infosys Technologies</p>
             </div>
             <span className="text-xs text-gray-400">5 hours ago</span>
           </div>

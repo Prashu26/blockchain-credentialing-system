@@ -211,7 +211,7 @@ const HiringVerification = () => {
             <div className="text-xs text-purple-600 mt-1">Lightning fast</div>
           </div>
           <div className="text-center p-4 bg-yellow-50 rounded-lg">
-            <div className="text-2xl font-bold text-yellow-600 mb-2">156</div>
+            <div className="text-2xl font-bold text-yellow-600 mb-2">2,847</div>
             <div className="text-sm text-gray-600">Successful Hires</div>
             <div className="text-xs text-yellow-600 mt-1">From verified candidates</div>
           </div>

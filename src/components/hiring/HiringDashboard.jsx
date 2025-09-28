@@ -70,8 +70,8 @@ const HiringDashboard = () => {
   };
 
   const topCandidates = [
-    { name: 'John Doe', skills: ['React', 'Node.js', 'MongoDB'], level: 'Advanced', certificates: 3, rating: 4.8 },
-    { name: 'Jane Smith', skills: ['Blockchain', 'Solidity', 'Web3'], level: 'Expert', certificates: 5, rating: 4.9 },
+    { name: 'Arjun Sharma', skills: ['React', 'Node.js', 'MongoDB'], level: 'Advanced', certificates: 3, rating: 4.8 },
+    { name: 'Priya Patel', skills: ['Blockchain', 'Solidity', 'Web3'], level: 'Expert', certificates: 5, rating: 4.9 },
     { name: 'Mike Johnson', skills: ['Python', 'ML', 'Data Science'], level: 'Intermediate', certificates: 2, rating: 4.6 },
     { name: 'Sarah Wilson', skills: ['Cybersecurity', 'Ethical Hacking'], level: 'Advanced', certificates: 4, rating: 4.7 },
   ];

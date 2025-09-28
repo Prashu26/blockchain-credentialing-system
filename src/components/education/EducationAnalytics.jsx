@@ -190,19 +190,19 @@ const EducationAnalytics = () => {
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Regional Enrollment Distribution</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="text-center p-4 border border-gray-200 rounded-lg">
-            <div className="text-2xl font-bold text-gray-900 mb-2">312</div>
-            <div className="text-sm text-gray-600 mb-1">North America</div>
-            <div className="text-xs text-green-600">+15% growth</div>
+            <div className="text-2xl font-bold text-gray-900 mb-2">1247</div>
+            <div className="text-sm text-gray-600 mb-1">North India</div>
+            <div className="text-xs text-green-600">+22% growth</div>
           </div>
           <div className="text-center p-4 border border-gray-200 rounded-lg">
-            <div className="text-2xl font-bold text-gray-900 mb-2">287</div>
-            <div className="text-sm text-gray-600 mb-1">Europe</div>
-            <div className="text-xs text-green-600">+12% growth</div>
-          </div>
-          <div className="text-center p-4 border border-gray-200 rounded-lg">
-            <div className="text-2xl font-bold text-gray-900 mb-2">456</div>
-            <div className="text-sm text-gray-600 mb-1">Asia Pacific</div>
+            <div className="text-2xl font-bold text-gray-900 mb-2">1586</div>
+            <div className="text-sm text-gray-600 mb-1">South India</div>
             <div className="text-xs text-green-600">+28% growth</div>
+          </div>
+          <div className="text-center p-4 border border-gray-200 rounded-lg">
+            <div className="text-2xl font-bold text-gray-900 mb-2">943</div>
+            <div className="text-sm text-gray-600 mb-1">West India</div>
+            <div className="text-xs text-green-600">+18% growth</div>
           </div>
           <div className="text-center p-4 border border-gray-200 rounded-lg">
             <div className="text-2xl font-bold text-gray-900 mb-2">192</div>
