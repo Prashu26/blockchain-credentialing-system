@@ -32,10 +32,40 @@ const Chart = ({ type, data, options, title }) => {
     plugins: {
       legend: {
         position: 'top',
+        labels: {
+          color: '#0096C7',
+          font: {
+            size: 12,
+            weight: 'bold'
+          }
+        }
       },
       title: {
         display: !!title,
         text: title,
+        color: '#0096C7',
+        font: {
+          size: 16,
+          weight: 'bold'
+        }
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: '#0096C7',
+        },
+        grid: {
+          color: 'rgba(0, 150, 199, 0.2)',
+        },
+      },
+      y: {
+        ticks: {
+          color: '#0096C7',
+        },
+        grid: {
+          color: 'rgba(0, 150, 199, 0.2)',
+        },
       },
     },
     ...options,
@@ -55,7 +85,12 @@ const Chart = ({ type, data, options, title }) => {
   };
 
   return (
-    <div className="dashboard-card">
+    <div className="backdrop-blur-sm rounded-2xl p-6 shadow-lg transition-all duration-300 border" 
+         style={{
+           background: 'rgba(255, 255, 255, 0.1)',
+           borderColor: 'rgba(0, 150, 199, 0.3)',
+           boxShadow: '0 8px 32px rgba(0, 150, 199, 0.2)'
+         }}>
       <div className="h-80">
         {renderChart()}
       </div>

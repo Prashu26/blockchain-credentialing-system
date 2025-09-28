@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/shared/Sidebar';
+import Landing from './components/Landing';
 
 // Admin Components
 import DashboardOverview from './components/admin/DashboardOverview';
@@ -10,6 +11,7 @@ import BlockchainStatus from './components/admin/BlockchainStatus';
 import Analytics from './components/admin/Analytics';
 
 // Learner Components
+import LearnerDashboard from './components/learner/LearnerDashboard';
 import SkillPassport from './components/learner/SkillPassport';
 import CareerPathways from './components/learner/CareerPathways';
 import LearnerAnalytics from './components/learner/LearnerAnalytics';
@@ -30,8 +32,33 @@ import HiringAnalytics from './components/hiring/HiringAnalytics';
 import HiringReports from './components/hiring/HiringReports';
 
 function App() {
+  const [showLanding, setShowLanding] = useState(true);
   const [userType, setUserType] = useState('admin');
   const [activeTab, setActiveTab] = useState('dashboard');
+
+  const handleUserTypeSelect = (type) => {
+    setUserType(type);
+    // Set appropriate default tab for each user type
+    if (type === 'admin') {
+      setActiveTab('dashboard');
+    } else if (type === 'learner') {
+      setActiveTab('dashboard');
+    } else if (type === 'education') {
+      setActiveTab('dashboard');
+    } else if (type === 'hiring') {
+      setActiveTab('dashboard');
+    }
+    setShowLanding(false);
+  };
+
+  const handleBackToLanding = () => {
+    setShowLanding(true);
+  };
+
+  // Show landing page if showLanding is true
+  if (showLanding) {
+    return <Landing onUserTypeSelect={handleUserTypeSelect} />;
+  }
 
   const renderDashboard = () => {
     switch (userType) {
@@ -52,6 +79,8 @@ function App() {
         }
       case 'learner':
         switch (activeTab) {
+          case 'dashboard':
+            return <LearnerDashboard />;
           case 'passport':
             return <SkillPassport />;
           case 'pathway':
@@ -61,7 +90,7 @@ function App() {
           case 'certificates':
             return <CertificateViewer />;
           default:
-            return <SkillPassport />;
+            return <LearnerDashboard />;
         }
       case 'education':
         switch (activeTab) {
@@ -99,37 +128,17 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* User Type Selector */}
-      <div className="fixed top-4 right-4 z-20">
-        <select
-          value={userType}
-          onChange={(e) => {
-            setUserType(e.target.value);
-            setActiveTab(e.target.value === 'admin' ? 'dashboard' : 
-                        e.target.value === 'learner' ? 'passport' :
-                        e.target.value === 'education' ? 'dashboard' : 'dashboard');
-          }}
-          className="bg-white border border-gray-300 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option value="admin">Admin Portal</option>
-          <option value="learner">Learner Portal</option>
-          <option value="education">Education Portal</option>
-          <option value="hiring">Hiring Portal</option>
-        </select>
-      </div>
-
-      <div className="flex">
-        <Sidebar 
-          activeTab={activeTab} 
-          setActiveTab={setActiveTab} 
-          userType={userType} 
-        />
-        
-        <main className="flex-1 ml-64 p-8">
-          {renderDashboard()}
-        </main>
-      </div>
+    <div className="min-h-screen flex" style={{backgroundColor: '#001629'}}>
+      <Sidebar 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        userType={userType}
+        onBackToLanding={handleBackToLanding}
+      />
+      
+      <main className="flex-1 ml-64 min-h-screen" style={{backgroundColor: '#001629'}}>
+        {renderDashboard()}
+      </main>
     </div>
   );
 }

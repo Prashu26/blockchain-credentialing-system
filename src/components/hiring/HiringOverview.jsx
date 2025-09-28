@@ -8,49 +8,80 @@ const HiringOverview = () => {
   const recentVerifications = mockCertificates.slice(0, 4);
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900">Hiring Dashboard</h1>
-          <p className="text-gray-600 mt-1">Find and verify top talent with blockchain-verified skills</p>
-        </div>
-        <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-          Active Hiring
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 flex items-start justify-center p-4 relative overflow-hidden" style={{backgroundColor: '#001629'}}>
+      {/* #0096C7 Style Background Grid */}
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 150, 199, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 150, 199, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}></div>
       </div>
+      
+      {/* #0096C7 Gradient Blur Effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.4)'}}></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.3)', animationDelay: '1s'}}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.2)', animationDelay: '2s'}}></div>
+      
+      <div className="relative z-10 max-w-7xl w-full p-8 space-y-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight" style={{textShadow: '0 0 30px rgba(0, 150, 199, 0.7)'}}>
+            <span style={{color: '#0096C7', textShadow: '0 0 20px rgba(0, 150, 199, 0.8)'}}>
+              Hiring Dashboard
+            </span>
+          </h1>
+          <p className="text-2xl text-gray-200 max-w-3xl mx-auto mb-4 font-medium">
+            Find and verify <span style={{color: '#0096C7'}}>top talent</span> with <span style={{color: '#0096C7'}}>blockchain-verified skills</span>
+          </p>
+          <div className="flex justify-center">
+            <div className="text-white px-6 py-3 rounded-full text-sm font-bold shadow-2xl flex items-center space-x-2" style={{
+              background: 'linear-gradient(135deg, #0096C7, #0077B6)',
+              boxShadow: '0 4px 15px rgba(0, 150, 199, 0.4)'
+            }}>
+              <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+              <span>💼 Active Hiring</span>
+            </div>
+          </div>
+        </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        <StatCard
-          title="Available Candidates"
-          value="2,847"
-          change="+12%"
-          icon={Users}
-          color="blue"
-        />
-        <StatCard
-          title="Verified Skills"
-          value="15,234"
-          change="+8%"
-          icon={Award}
-          color="green"
-        />
-        <StatCard
-          title="Successful Hires"
-          value="156"
-          change="+25%"
-          icon={TrendingUp}
-          color="purple"
-        />
-        <StatCard
-          title="Verification Rate"
-          value="98.7%"
-          change="+2%"
-          icon={CheckCircle}
-          color="yellow"
-        />
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <StatCard
+            title="Available Candidates"
+            value="2,847"
+            trend="up"
+            trendValue="+12%"
+            icon={Users}
+            color="ocean"
+          />
+          <StatCard
+            title="Verified Skills"
+            value="15,234"
+            trend="up"
+            trendValue="+8%"
+            icon={Award}
+            color="ocean"
+          />
+          <StatCard
+            title="Successful Hires"
+            value="156"
+            trend="up"
+            trendValue="+25%"
+            icon={TrendingUp}
+            color="ocean"
+          />
+          <StatCard
+            title="Verification Rate"
+            value="98.7%"
+            trend="up"
+            trendValue="+2%"
+            icon={CheckCircle}
+            color="ocean"
+          />
+        </div>
 
       {/* Quick Actions */}
       <div className="dashboard-card">
@@ -170,6 +201,7 @@ const HiringOverview = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

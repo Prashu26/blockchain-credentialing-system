@@ -10,8 +10,8 @@ const LearnerAnalytics = () => {
       {
         label: 'Market Demand (%)',
         data: Object.values(mockAnalytics.skillDemand),
-        backgroundColor: 'rgba(59, 130, 246, 0.8)',
-        borderColor: 'rgb(59, 130, 246)',
+        backgroundColor: 'rgba(0, 150, 199, 0.8)',
+        borderColor: '#0096C7',
         borderWidth: 2,
       },
     ],
@@ -24,18 +24,18 @@ const LearnerAnalytics = () => {
         label: 'Employment Rate (%)',
         data: Object.values(mockAnalytics.employmentStats),
         backgroundColor: [
-          'rgba(34, 197, 94, 0.8)',
-          'rgba(59, 130, 246, 0.8)',
-          'rgba(147, 51, 234, 0.8)',
-          'rgba(251, 191, 36, 0.8)',
-          'rgba(239, 68, 68, 0.8)',
+          'rgba(0, 150, 199, 0.8)',
+          'rgba(0, 119, 182, 0.8)',
+          'rgba(2, 62, 138, 0.8)',
+          'rgba(1, 42, 74, 0.8)',
+          'rgba(0, 22, 41, 0.8)',
         ],
         borderColor: [
-          'rgb(34, 197, 94)',
-          'rgb(59, 130, 246)',
-          'rgb(147, 51, 234)',
-          'rgb(251, 191, 36)',
-          'rgb(239, 68, 68)',
+          '#0096C7',
+          '#0077B6',
+          '#023E8A',
+          '#012A4A',
+          '#001629',
         ],
         borderWidth: 2,
       },
@@ -85,17 +85,44 @@ const LearnerAnalytics = () => {
   ];
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900">My Learning Analytics</h1>
-          <p className="text-gray-600 mt-1">Track your progress and discover market opportunities</p>
-        </div>
-        <div className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-          AI-Powered Insights
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 flex items-start justify-center p-4 relative overflow-hidden" style={{backgroundColor: '#001629'}}>
+      {/* #0096C7 Style Background Grid */}
+      <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(0, 150, 199, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(0, 150, 199, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}></div>
       </div>
+      
+      {/* #0096C7 Gradient Blur Effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.4)'}}></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.3)', animationDelay: '1s'}}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{backgroundColor: 'rgba(0, 150, 199, 0.2)', animationDelay: '2s'}}></div>
+      
+      <div className="relative z-10 max-w-7xl w-full p-8 space-y-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 tracking-tight" style={{textShadow: '0 0 30px rgba(0, 150, 199, 0.7)'}}>
+            <span style={{color: '#0096C7', textShadow: '0 0 20px rgba(0, 150, 199, 0.8)'}}>
+              Learning Analytics
+            </span>
+          </h1>
+          <p className="text-2xl text-gray-200 max-w-3xl mx-auto mb-4 font-medium">
+            Track your <span style={{color: '#0096C7'}}>progress</span> and discover <span style={{color: '#0096C7'}}>market opportunities</span>
+          </p>
+          <div className="flex justify-center">
+            <div className="text-white px-6 py-3 rounded-full text-sm font-bold shadow-2xl flex items-center space-x-2" style={{
+              background: 'linear-gradient(135deg, #0096C7, #0077B6)',
+              boxShadow: '0 4px 15px rgba(0, 150, 199, 0.4)'
+            }}>
+              <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+              <span>🧠 AI-Powered Insights</span>
+            </div>
+          </div>
+        </div>
 
       {/* Key Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -318,6 +345,7 @@ const LearnerAnalytics = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
